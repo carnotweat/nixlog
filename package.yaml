@@ -1,0 +1,32 @@
+name: blog
+version: 0.0.1.0
+synopsis: blog
+description: See README at <https://github.com/carnotweat/blog
+author: sameer
+github: carnotweat/blog
+category: cabal
+license: BSD-3-Clause
+
+dependencies:
+  - base >=4.11 && < 5
+
+library:
+  source-dirs: src
+
+executables:
+  blog-exe:
+    source-dirs: app
+    main: Main.hs
+    dependencies:
+      - blog
+
+tests:
+  blog-test:
+    source-dirs: test
+    main: Main.hs
+    ghc-options:
+      - -Wall
+      - -threaded
+    dependencies:
+      - blog
+      - hedgehog
