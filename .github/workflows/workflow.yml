@@ -34,3 +34,5 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+      - name: Nix Shell
+          uses: workflow/nix-shell-action@v3.0.2
